@@ -1,0 +1,67 @@
+body
+{
+    background-color: hsl(222, 26%, 31%);
+}
+
+.framework {
+    width: 375px;
+    height: 750px;
+    border: 5px solid black;
+    padding: 10px;
+}
+
+.container
+{
+    width: 375px;
+    height: 60px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.col-6
+{
+    width: 186px;
+    height: 60px;
+    border: 1px solid black;
+    color: white;
+    
+}
+
+.title1
+{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.title2
+{
+    font-size: 15px;
+}
+
+/* Estilo para el botón de tres estados */
+.toggle-button 
+{
+    padding: 5px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    width: 70px;
+    height: 25px;
+}
+
+.state-1
+{
+    background-color: #5cb85c; /* Verde */
+}
+
+.state-2
+{
+    background-color: #f0ad4e; /* Naranja */
+}
+
+.state-3
+{
+    background-color: #d9534f; /* Rojo */
+}
