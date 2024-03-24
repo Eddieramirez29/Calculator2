@@ -51,6 +51,87 @@ body
     height: 25px;
 }
 
+#screen
+{
+    position: absolute;
+    top: 60px;
+    left: 0px;
+    height: 50px;
+    width: 375px;
+    background-color:  hsl(224, 36%, 15%);
+    border: none;
+    border-radius: 15px;
+}
+
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+ 
+
+
+  #keyboard
+  {
+    position: absolute;
+    top: 125px;
+    left: 0px;
+    height: 620px;
+    width: 375px;
+    background-color:  hsl(223, 31%, 20%);
+    border: none;
+    border-radius: 15px;
+  }
+
+  .button {
+    padding: 10px;
+    background-color: hsl(0, 0%, 100%);
+    border: none;
+    border-bottom: 3px solid hsl(224, 28%, 35%);
+    border-radius: 5px;
+    text-align: center;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    color:hsl(221, 14%, 31%);
+  }
+
+  #reset
+  {
+    position: relative;
+    top: 20px;
+    padding: 10px;
+    background-color: hsl(222, 26%, 31%);
+    border: none;
+    border-bottom: 3px solid hsl(223, 57%, 21%);
+    border-radius: 5px;
+    text-align: center;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    color:hsl(0, 0%, 100%);
+    width: 180px;
+  }
+
+  #igual
+  {
+    position: relative;
+    top: 20px;
+    left: 15px;
+    padding: 10px;
+    background-color: hsl(6, 63%, 50%);
+    border: none;
+    border-bottom: 3px solid hsl(6, 70%, 34%);
+    border-radius: 5px;
+    text-align: center;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    color:hsl(0, 0%, 100%);
+    width: 177px;
+  }
+
+ /* States for calculator */
 .state-1
 {
     background-color: #5cb85c; /* Verde */
