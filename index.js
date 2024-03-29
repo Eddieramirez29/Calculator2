@@ -24,7 +24,31 @@ buttons.forEach(button => {
     button.addEventListener('click', () => {
         // Obtener el texto del botón presionado
         const buttonText = button.textContent;
-        // Mostrar el texto en la pantalla
-        screen.value += buttonText;
+        // Realizar acciones basadas en el texto del botón
+        switch (buttonText) {
+            case 'RESET':
+                screen.value = "";
+                break;
+            case 'DEL':
+                screen.value = screen.value.slice(0, -1); // Eliminar el último caracter
+                break;
+            case '=':
+                screen.value = math.evaluate(screen.value);
+                
+                break;
+            case '+':
+            case '-':
+            case 'X':
+            case '/':
+            case '.':
+                const lastChar = screen.value.slice(-1); // Obtener el último caracter en pantalla
+                if (!'+-X/'.includes(lastChar) && lastChar !== '.' && screen.value !== '') {
+                    screen.value += buttonText; // Añadir el texto del botón al valor actual del input
+                }
+                break;
+            default:
+                screen.value += buttonText; // Añadir el texto del botón al valor actual del input
+                break;
+        }
     });
 });
