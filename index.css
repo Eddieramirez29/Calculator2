@@ -1,11 +1,14 @@
 body
 {
     background-color: hsl(222, 26%, 31%);
+    flex: content;
+    align-items: center;
+    justify-content: center;
 }
 
 .framework {
     width: 375px;
-    height: 300px;
+    height: 600px;
     padding: 10px;
 }
 
@@ -63,8 +66,11 @@ body
 
 .button-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(4, 0fr);
+    gap: 10px;
+    position: relative;
+    top: 20px;
+    left: 10px;
   }
  
 
@@ -72,9 +78,9 @@ body
   #keyboard
   {
     position: absolute;
-    top: 125px;
+    top: 135px;
     left: 0px;
-    height: 620px;
+    height: 385px;
     width: 375px;
     background-color:  hsl(223, 31%, 20%);
     border: none;
@@ -82,22 +88,45 @@ body
   }
 
   .button {
-    padding: 10px;
-    background-color: hsl(0, 0%, 100%);
+    padding: 5px;
+    background-color: hsl(0, 22%, 90%);
     border: none;
     border-bottom: 3px solid hsl(224, 28%, 35%);
     border-radius: 5px;
     text-align: center;
-    height: 50px;
+    height: 60px;
+    width: 80px;
     font-size: 20px;
     font-weight: bold;
     color:hsl(221, 14%, 31%);
+    cursor:grabbing;
+    transition: background-color 1s;
   }
+  .button:hover
+  {
+    background-color: white;
+  }
+.button-del
+{
+    background-color: hsl(222, 26%, 31%);
+    border: none;
+    border-bottom: 3px solid hsl(223, 57%, 21%);
+    color:hsl(0, 0%, 100%);
+}
 
+.button-del:hover, #reset:hover
+{
+    background-color:  hsl(239, 75%, 78%);
+}
+#reset:active
+ {
+    transform: translateY(5px); /* Añade un pequeño desplazamiento hacia abajo */
+ }
   #reset
   {
     position: relative;
-    top: 20px;
+    top: 40px;
+    left: 10px;
     padding: 10px;
     background-color: hsl(222, 26%, 31%);
     border: none;
@@ -108,14 +137,14 @@ body
     font-size: 20px;
     font-weight: bold;
     color:hsl(0, 0%, 100%);
-    width: 180px;
+    width: 170px;
   }
 
   #igual
   {
     position: relative;
-    top: 20px;
-    left: 15px;
+    top: 40px;
+    left: 18px;
     padding: 10px;
     background-color: hsl(6, 63%, 50%);
     border: none;
@@ -126,21 +155,40 @@ body
     font-size: 20px;
     font-weight: bold;
     color:hsl(0, 0%, 100%);
-    width: 177px;
+    width: 170px;
   }
 
+  #igual:hover
+  {
+    background-color: hsl(6, 86%, 69%);
+  }
+ #igual:active
+ {
+    transform: translateY(5px); /* Añade un pequeño desplazamiento hacia abajo */
+ }
+  .button:active {
+    transform: translateY(5px); /* Añade un pequeño desplazamiento hacia abajo */
+  }
+
+
+  /* Estilo para el texto dentro del input */
+#screen {
+  font-size: 20px; /* Tamaño del texto */
+  color: white; /* Color del texto */
+  text-align: right; /* Alineación del texto a la derecha */
+}
  /* States for calculator */
 .state-1
 {
-    background-color: #5cb85c; /* Verde */
+    background-color:hsl(222, 26%, 31%); 
 }
 
 .state-2
 {
-    background-color: #f0ad4e; /* Naranja */
+    background-color: hsl(0, 0%, 90%); 
 }
 
 .state-3
 {
-    background-color: #d9534f; /* Rojo */
+    background-color: hsl(268, 75%, 9%); 
 }
