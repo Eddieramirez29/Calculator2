@@ -1,183 +1,229 @@
 body
 {
-    background-color: hsl(222, 26%, 31%);
-    flex: content;
-    align-items: center;
-    justify-content: center;
-}
-
-.framework {
-    width: 375px;
-    height: 600px;
-    padding: 10px;
-}
-
-.container
-{
-    width: 375px;
-    height: 60px;
     position: absolute;
-    left: 0px;
-    top: 0px;
-}
-
-.col-6
-{
-    width: 186px;
-    height: 60px;
-    color: white;
+    left: 450px;
+    background-color: hsl(222, 26%, 31%);
     
 }
 
-.title1
-{
-    font-size: 25px;
-    font-weight: bold;
+.framework {
+  width: 375px;
+  height: 600px;
+  padding: 10px;
 }
 
-.title2
-{
-    font-size: 15px;
+.container {
+  width: 375px;
+  height: 60px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
 }
 
-/* Estilo para el botón de tres estados */
-.toggle-button 
-{
-    padding: 5px;
-    cursor: pointer;
-    border: none;
-    outline: none;
-    border-radius: 5px;
-    width: 70px;
-    height: 25px;
+.col-6 {
+  width: 186px;
+  height: 60px;
+  color: white;
 }
 
-#screen
-{
-    position: absolute;
-    top: 60px;
-    left: 0px;
-    height: 50px;
-    width: 375px;
-    background-color:  hsl(224, 36%, 15%);
-    border: none;
-    border-radius: 15px;
+.title1 {
+  font-size: 25px;
+  font-weight: bold;
 }
 
-.button-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 0fr);
-    gap: 10px;
-    position: relative;
-    top: 20px;
-    left: 10px;
-  }
- 
-
-
-  #keyboard
-  {
-    position: absolute;
-    top: 135px;
-    left: 0px;
-    height: 385px;
-    width: 375px;
-    background-color:  hsl(223, 31%, 20%);
-    border: none;
-    border-radius: 15px;
-  }
-
-  .button {
-    padding: 5px;
-    background-color: hsl(0, 22%, 90%);
-    border: none;
-    border-bottom: 3px solid hsl(224, 28%, 35%);
-    border-radius: 5px;
-    text-align: center;
-    height: 60px;
-    width: 80px;
-    font-size: 20px;
-    font-weight: bold;
-    color:hsl(221, 14%, 31%);
-    cursor:grabbing;
-    transition: background-color 1s;
-  }
-  .button:hover
-  {
-    background-color: white;
-  }
-.button-del
-{
-    background-color: hsl(222, 26%, 31%);
-    border: none;
-    border-bottom: 3px solid hsl(223, 57%, 21%);
-    color:hsl(0, 0%, 100%);
+.title2 {
+  font-size: 15px;
+  position: relative;
+  left: 160px;
 }
 
-.button-del:hover, #reset:hover
-{
-    background-color:  hsl(239, 75%, 78%);
+.toggle-button {
+  padding: 5px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  width: 70px;
+  height: 25px;
+  box-shadow: 0 4px 8px hsl(222, 26%, 31%); /* Sombras para profundidad */
 }
-#reset:active
- {
-    transform: translateY(5px); /* Añade un pequeño desplazamiento hacia abajo */
- }
-  #reset
-  {
-    position: relative;
-    top: 40px;
-    left: 10px;
-    padding: 10px;
-    background-color: hsl(222, 26%, 31%);
-    border: none;
-    border-bottom: 3px solid hsl(223, 57%, 21%);
-    border-radius: 5px;
-    text-align: center;
-    height: 50px;
-    font-size: 20px;
-    font-weight: bold;
-    color:hsl(0, 0%, 100%);
-    width: 170px;
-  }
 
-  #igual
-  {
-    position: relative;
-    top: 40px;
-    left: 18px;
-    padding: 10px;
-    background-color: hsl(6, 63%, 50%);
-    border: none;
-    border-bottom: 3px solid hsl(6, 70%, 34%);
-    border-radius: 5px;
-    text-align: center;
-    height: 50px;
-    font-size: 20px;
-    font-weight: bold;
-    color:hsl(0, 0%, 100%);
-    width: 170px;
-  }
-
-  #igual:hover
-  {
-    background-color: hsl(6, 86%, 69%);
-  }
- #igual:active
- {
-    transform: translateY(5px); /* Añade un pequeño desplazamiento hacia abajo */
- }
-  .button:active {
-    transform: translateY(5px); /* Añade un pequeño desplazamiento hacia abajo */
-  }
-
-
-  /* Estilo para el texto dentro del input */
 #screen {
+  position: absolute;
+  top: 60px;
+  left: 0px;
+  height: 50px;
+  width: 375px;
+  background-color: hsl(224, 36%, 15%);
   font-size: 20px; /* Tamaño del texto */
   color: white; /* Color del texto */
   text-align: right; /* Alineación del texto a la derecha */
+  border: none;
+  border-radius: 15px;
 }
- /* States for calculator */
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 0fr);
+  gap: 10px;
+  position: relative;
+  top: 20px;
+  left: 10px;
+}
+
+#keyboard {
+  position: absolute;
+  top: 135px;
+  left: 0px;
+  height: 385px;
+  width: 375px;
+  background-color: hsl(223, 31%, 20%);
+  border: none;
+  border-radius: 15px;
+}
+
+.button {
+  padding: 5px;
+  background-color: hsl(0, 22%, 90%);
+  border: none;
+  border-bottom: 3px solid hsl(224, 28%, 35%);
+  border-radius: 5px;
+  text-align: center;
+  height: 60px;
+  width: 80px;
+  font-size: 20px;
+  font-weight: bold;
+  color: hsl(221, 14%, 31%);
+  cursor: grabbing;
+  transition: background-color 1s;
+}
+
+.button:hover {
+  background-color: white;
+}
+
+.button-del {
+  background-color: hsl(222, 26%, 31%);
+  border: none;
+  border-bottom: 3px solid hsl(223, 57%, 21%);
+  color: hsl(0, 0%, 100%);
+}
+
+.button-del:hover,
+#reset:hover {
+  background-color: hsl(239, 75%, 78%);
+}
+
+#reset:active {
+  transform: translateY(5px);
+}
+
+#reset {
+  position: relative;
+  top: 40px;
+  left: 10px;
+  padding: 10px;
+  background-color: hsl(222, 26%, 31%);
+  border: none;
+  border-bottom: 3px solid hsl(223, 57%, 21%);
+  border-radius: 5px;
+  text-align: center;
+  height: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  color: hsl(0, 0%, 100%);
+  width: 170px;
+}
+
+#igual {
+  position: relative;
+  top: 40px;
+  left: 18px;
+  padding: 10px;
+  background-color: hsl(6, 63%, 50%);
+  border: none;
+  border-bottom: 3px solid hsl(6, 70%, 34%);
+  border-radius: 5px;
+  text-align: center;
+  height: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  color: hsl(0, 0%, 100%);
+  width: 170px;
+}
+
+#igual:hover {
+  background-color: hsl(6, 86%, 69%);
+}
+
+#igual:active {
+  transform: translateY(5px);
+}
+
+.button:active {
+  transform: translateY(5px);
+}
+
+
+/* Desktop changes */
+@media (min-width: 375px) {
+  .button 
+  {
+      width: 100px; /* Doble del ancho original */
+  }
+  
+  #keyboard {
+    width: 469px;
+  }
+  #igual {
+    width: 212px;
+  }
+  #reset {
+    width: 212px;
+  }
+
+  #screen 
+  {
+    width: 469px;
+  }
+
+}
+
+/* Estilos responsivos mobile */
+@media (max-width: 375px) 
+{
+  .framework 
+  {
+      width: 375px;
+      height: 600px;
+      padding: 10px;
+  }
+  
+  .container
+  {
+      width: 375px;
+  }
+  
+  .col-6
+  {
+      width: 186px;
+  }
+  
+  #screen 
+  {
+      width: 375px;
+  }
+  
+  #keyboard 
+  {
+      width: 375px;
+  }
+  
+  .button {
+      width: 80px;
+  }
+}
+/* States for calculator */
 .state-1
 {
     background-color:hsl(222, 26%, 31%); 
@@ -192,3 +238,6 @@ body
 {
     background-color: hsl(268, 75%, 9%); 
 }
+
+
+

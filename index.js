@@ -24,6 +24,7 @@ buttons.forEach(button => {
     button.addEventListener('click', () => {
         // Obtener el texto del botón presionado
         const buttonText = button.textContent;
+       
         // Realizar acciones basadas en el texto del botón
         switch (buttonText) {
             case 'RESET':
@@ -33,18 +34,23 @@ buttons.forEach(button => {
                 screen.value = screen.value.slice(0, -1); // Eliminar el último caracter
                 break;
             case '=':
-                screen.value = math.evaluate(screen.value);
-                
+                // Reemplazar todos los caracteres "X" con "*"
+      let expresion = screen.value.replace(/X/g, '*');
+      // Evaluar la expresión y mostrar el resultado
+      screen.value = math.evaluate(expresion);
                 break;
             case '+':
             case '-':
+            case '+':
             case 'X':
             case '/':
             case '.':
                 const lastChar = screen.value.slice(-1); // Obtener el último caracter en pantalla
-                if (!'+-X/'.includes(lastChar) && lastChar !== '.' && screen.value !== '') {
+                if (!'+-X/'.includes(lastChar) && lastChar !== '.' && screen.value !== '') 
+                {
                     screen.value += buttonText; // Añadir el texto del botón al valor actual del input
                 }
+                
                 break;
             default:
                 screen.value += buttonText; // Añadir el texto del botón al valor actual del input
