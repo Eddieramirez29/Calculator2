@@ -13,18 +13,65 @@ function toggleState()
     // Cambiar el color de fondo del body
     cambiarColorFondo(currentState);
 }
-
+// Obtener el elemento div por su clase
+let  title1Element = document.querySelector('.title1');
+let  title2Element = document.querySelector('.title2');
+let  screenElement = document.querySelector('#screen');
+let  keyboardElement = document.querySelector('#keyboard');
+let  buttonElements = document.querySelector('.button');
+let buttonDelElement = document.querySelector('.button-del');
+let buttonResetElement = document.querySelector('#reset');
+let buttonIgualElement = document.querySelector('#igual');
 // Función para cambiar el color de fondo del body
 function cambiarColorFondo(estado) {
     switch (estado) {
         case 1:
-            document.body.style.backgroundColor = 'hsl(222, 26%, 31%)'; // Rojo
+            document.body.style.backgroundColor = 'hsl(222, 26%, 31%)';
+            title1Element.style.color = 'white';
+            title2Element.style.color = 'white';
+            screenElement.style.color = 'white';
+            screenElement.style.backgroundColor = 'hsl(224, 36%, 15%)';
+            keyboardElement.style.backgroundColor = "hsl(223, 31%, 20%)";
+
+            buttonElements.style.backgroundColor = "hsl(0, 22%, 90%)";
+
+            buttonDelElement.style.backgroundColor = "hsl(222, 26%, 31%)";
+            buttonDelElement.style.borderBottom  = "3px solid hsl(223, 57%, 21%)";
+            buttonDelElement.style.color = "hsl(0, 0%, 100%)";
+
+            buttonResetElement.style.backgroundColor = "hsl(222, 26%, 31%)";
+            buttonResetElement.style.borderBottom  = "3px solid hsl(223, 57%, 21%)";
+            buttonResetElement.style.color = "hsl(0, 0%, 100%)";
+
+            buttonIgualElement.style.backgroundColor = "hsl(6, 63%, 50%)";
+            buttonIgualElement.style.borderBottom  = "3px solid hsl(6, 70%, 34%)";
+            buttonIgualElement.style.color = "hsl(0, 0%, 100%)";
             break;
         case 2:
-            document.body.style.backgroundColor = 'hsl(0, 0%, 90%)'; // Gris claro
+            document.body.style.backgroundColor = 'hsl(0, 0%, 90%)';
+            // Cambiar el color del texto
+            title1Element.style.color = 'hsl(60, 10%, 19%)'; 
+            title2Element.style.color = 'hsl(60, 10%, 19%)';
+            screenElement.style.color = 'hsl(60, 10%, 19%)';
+            screenElement.style.backgroundColor = 'hsl(0, 0%, 93%)';
+            keyboardElement.style.backgroundColor = "hsl(0, 5%, 81%)";
+
+            buttonElements.style.backgroundColor = "hsl(0, 22%, 90%)";
+
+            buttonDelElement.style.backgroundColor = "hsl(222, 26%, 31%)";
+            buttonDelElement.style.borderBottom  = "3px solid hsl(223, 57%, 21%)";
+            buttonDelElement.style.color = "hsl(0, 0%, 100%)";
+
+            buttonResetElement.style.backgroundColor = "hsl(222, 26%, 31%)";
+            buttonResetElement.style.borderBottom  = "3px solid hsl(223, 57%, 21%)";
+            buttonResetElement.style.color = "hsl(0, 0%, 100%)";
+
+            buttonIgualElement.style.backgroundColor = "hsl(6, 63%, 50%)";
+            buttonIgualElement.style.borderBottom  = "3px solid hsl(6, 70%, 34%)";
+            buttonIgualElement.style.color = "hsl(0, 0%, 100%)";
             break;
-        case 3:
-            document.body.style.backgroundColor = 'hsl(268, 75%, 9%)'; // Negro
+        case 3: 
+            document.body.style.backgroundColor = 'hsl(268, 75%, 9%)'; 
             break;
         default:
             break;
