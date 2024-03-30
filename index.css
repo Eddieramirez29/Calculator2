@@ -40,11 +40,9 @@ body
 .toggle-button {
   padding: 5px;
   cursor: pointer;
-  border: none;
-  outline: none;
-  border-radius: 5px;
-  width: 70px;
-  height: 25px;
+  border-radius: 25px;
+  width: 50px;
+  height: 50px;
   box-shadow: 0 4px 8px hsl(222, 26%, 31%); /* Sombras para profundidad */
 }
 
@@ -223,21 +221,3 @@ body
       width: 80px;
   }
 }
-/* States for calculator */
-.state-1
-{
-    background-color:hsl(222, 26%, 31%); 
-}
-
-.state-2
-{
-    background-color: hsl(0, 0%, 90%); 
-}
-
-.state-3
-{
-    background-color: hsl(268, 75%, 9%); 
-}
-
-
-

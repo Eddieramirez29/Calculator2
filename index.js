@@ -3,14 +3,32 @@ var currentState = 1;
 
 function toggleState() 
 {
-    var button = document.getElementById('toggleButton');
+    let button = document.getElementById('toggleButton');
 
     // Cambiar el estado y el texto del botón
     currentState = (currentState % 3) + 1;
     button.innerHTML = currentState;
 
-    // Actualizar la clase para cambiar el estilo
-    button.className = 'toggle-button state-' + currentState;
+
+    // Cambiar el color de fondo del body
+    cambiarColorFondo(currentState);
+}
+
+// Función para cambiar el color de fondo del body
+function cambiarColorFondo(estado) {
+    switch (estado) {
+        case 1:
+            document.body.style.backgroundColor = 'hsl(222, 26%, 31%)'; // Rojo
+            break;
+        case 2:
+            document.body.style.backgroundColor = 'hsl(0, 0%, 90%)'; // Gris claro
+            break;
+        case 3:
+            document.body.style.backgroundColor = 'hsl(268, 75%, 9%)'; // Negro
+            break;
+        default:
+            break;
+    }
 }
 
 // Obtener todos los botones
